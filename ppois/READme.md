@@ -11,7 +11,7 @@
 - `show_afisha(self)`: Используется для просмотра списка спектаклей
 - `get_performance(self, index)`: Возвращает спектакль
 - `get_stage(self, performance)`: Возвращает сцену проведения спектакля
-- `start_performance(self, performance)`: Запускает спектакль
+- `start_performance(self)`: Запускает спектакль
 
 ### Класс Performance
 Класс для представления спектакля в системе.
@@ -47,12 +47,11 @@
 - `__init__(self, name, experience_years)`: Инициализация объекта класса Director
 - `directed_plays_count(self)`: Возвращает количество режиссируемых проектов
 - `add_directed_play(self, play)`: Добавляет проект в портфолио режиссера
-- `display_info(self)`: Отображает информацию о режиссере
 
 ### Класс Stage
 Класс для представления сцены в системе.
 #### Методы
-- `__init__(self, stage_number, capacity)`: Инициализация объекта класса Stage
+- `__init__(self, stage_number)`: Инициализация объекта класса Stage
 - `number(self)`: Возвращает номер сцены
 - `is_available(self)`: Показывает, свободна ли сцена
 - `take_stage(self)`: Занимает сцену
@@ -95,7 +94,7 @@
 Класс для проведения продажи билетов в театр.
 #### Методы
 - `__init__(self, theatres)`: Инициализация объекта класса OrderService
-- `__show_theatres(self)`: Выводит список театров
+- `show_theatres(self)`: Выводит список театров
 - `__show_price(self)`: Выводит доступные тарифы для покупки билета
 - `__choose_theatre(self)`: Возвращает индекс выбранного театра
 - `__choose_performance(self, theatre)`: Возвращает индекс выбранного спектакля
